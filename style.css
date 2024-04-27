@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+::selection {
+  background-color: red;
+  color: #fff;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(./images/banner.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px;
+}
+.logo {
+  width: 140px;
+}
+.logo img {
+  width: 100%;
+}
+.link {
+  color: inherit;
+  position: relative;
+}
+.navItems {
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+}
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: red;
+  transition: 0.3s;
+}
+.link:hover::after {
+  width: 100%;
+}
+.bannerText {
+  padding: 0 80px;
+  height: calc(100% - 110px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.bannerTitle {
+  font-size: 60px;
+}
+.description {
+  line-height: 1.6rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.bannerBtn {
+  padding: 16px 35px;
+  background-color: transparent;
+  color: inherit;
+  border: 3px solid #fff;
+  transition: .7s;
+  cursor: pointer;
+}
+.bannerBtn:hover {
+  background-color: #6495ed;
+  border-color: #6495ed;
+}
+.link{
+    display: flex;
+    gap: 30px;
+}
+.fa-facebook-f{
+    margin-right: 30px;
+}
+.menu {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .menu{
+        display: block;
+    }
+    .navItems{
+        display: none;
+    }
+    .bannerTitle{
+        font-size: 30px;
+    }
+}
